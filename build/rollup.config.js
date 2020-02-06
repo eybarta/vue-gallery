@@ -4,7 +4,7 @@ import {terser} from 'rollup-plugin-terser';
 import commonjs from 'rollup-plugin-commonjs';
 
 const isMinify = process.env.BUILD_MODE === 'minify';
-
+console.log("isMinify >> ", isMinify);
 export default {
   input: 'src/index.js',
   output: {

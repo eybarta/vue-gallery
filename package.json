@@ -1,5 +1,5 @@
 {
-  "name": "vue-gallery",
+  "name": "vue-gallery-ebfork",
   "version": "2.0.1",
   "description": "VueJS responsive and customizable image and video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers.",
   "main": "dist/js/vue-gallery.js",
@@ -8,7 +8,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "node_modules/.bin/eslint ./",
-    "build": "NODE_ENV=production node_modules/.bin/rollup -c ./build/rollup.config.js && NODE_ENV=production BUILD_MODE=minify node_modules/.bin/rollup -c ./build/rollup.config.js",
+    "build": "cross-env NODE_ENV=production node_modules/.bin/rollup -c ./build/rollup.config.js && NODE_ENV=production BUILD_MODE=minify node_modules/.bin/rollup -c ./build/rollup.config.js",
+    "build2": "node_modules/.bin/rollup -c ./build/rollup.config.js",
+    "buildm": "cross-env BUILD_MODE=minify node_modules/.bin/rollup -c ./build/rollup.config.js",
     "patch": "npm version patch",
     "minor": "npm version minor",
     "major": "npm version major",
@@ -46,6 +48,7 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
+    "cross-env": "^7.0.0",
     "eslint": "^5.13.0",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "4.3.2",
